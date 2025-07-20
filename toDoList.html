@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To-Do List App</title>
+    <meta name="description" content="Simple and Clean To-Do List App">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="toDoList.css">
+</head>
+
+<body>
+
+    <h1>To-Do List</h1>
+
+    <main class="mainBox">
+        <section class="container">
+            <h3>Enter Your Tasks Below:</h3>
+
+            <div class="search">
+                <input class="searchBox" type="text" placeholder="Example: Wake up at 5am">
+                <button id="add">Add Task</button>
+            </div>
+
+            <div class="taskBar">
+                <div id="null">No tasks available...</div>
+                <div class="null">Your tasks will appear here.</div>
+                <div class="tasksMenu">
+                    <!-- Task items will be dynamically added here -->
+                </div>
+            </div>
+
+            <pre>==</pre>
+
+        </section>
+    </main>
+
+    <script src="toDoList.js"></script>
+</body>
+</html>

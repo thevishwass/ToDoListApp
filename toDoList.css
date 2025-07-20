@@ -1,0 +1,228 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(145deg, #000428, #004e92);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Scrollbar Custom */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+}
+
+/* Headings */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+/* Main Layout */
+.mainBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input & Button */
+.search {
+    display: flex;
+    width: 100%;
+}
+
+.searchBox {
+    flex: 1;
+    height: 45px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #ffffff;
+    color: #333;
+    transition: 0.3s;
+}
+
+.searchBox:focus {
+    box-shadow: 0 0 10px #00f0ff;
+}
+
+#add {
+    width: 120px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: #00f0ff;
+    color: #0d0d0d;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#add:hover {
+    background-color: #00cfff;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #00f0ff;
+}
+
+/* Task Section */
+.taskBar {
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    overflow-y: auto;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tasksMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.task:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.content {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.content:hover {
+    background-color: rgba(0, 255, 255, 0.05);
+}
+
+.content s {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.delete {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    color: #ff4e4e;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete:hover {
+    color: white;
+    background-color: rgba(255, 0, 0, 0.6);
+    border-radius: 50%;
+    transform: scale(1.1);
+}
+
+/* Placeholder Messages */
+#null,
+.null {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    padding: 10px 0;
+}
+
+pre {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    user-select: none;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .searchBox {
+        font-size: 0.9rem;
+    }
+
+    #add {
+        width: 90px;
+        font-size: 0.9rem;
+    }
+}
